@@ -1,0 +1,54 @@
+:root {
+  --bs-primary: #0d7c8f;
+  --bs-primary-rgb: 13, 124, 143;
+  --accent: #f4a259;
+}
+
+html { scroll-behavior: smooth; }
+
+body { font-family: 'Segoe UI', Roboto, sans-serif; }
+
+/* Navbar */
+.navbar { background: rgba(8, 60, 70, .95); }
+.navbar-brand { font-weight: 700; letter-spacing: .5px; }
+.navbar-brand i { color: var(--accent); }
+
+/* Héros */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 800; }
+
+/* Bouton d'accent */
+.btn-accent { background: var(--accent); border: none; color: #222; font-weight: 600; }
+.btn-accent:hover { background: #e8913f; color: #000; }
+
+/* Titres de section */
+.section-title { font-weight: 700; margin-bottom: 2.5rem; position: relative; }
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent);
+  margin: .6rem auto 0;
+  border-radius: 2px;
+}
+
+/* Cartes */
+.card { border: none; transition: transform .25s, box-shadow .25s; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 .8rem 1.5rem rgba(0,0,0,.15); }
+.card-img-top { height: 220px; object-fit: cover; }
+
+/* Accordéon */
+.accordion-button:not(.collapsed) { background: rgba(13,124,143,.1); color: #0d7c8f; }
+
+/* Pied de page */
+footer { background: #083c46; color: #cfe6ea; }
+footer a { color: #fff; font-size: 1.4rem; margin: 0 .6rem; transition: color .2s; }
+footer a:hover { color: var(--accent); }
